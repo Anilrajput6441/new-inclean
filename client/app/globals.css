@@ -43,13 +43,28 @@ body::-webkit-scrollbar {
 
 .lato-light {
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
+  font-style: normal;
+}
+.lato-medium {
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
   font-style: normal;
 }
 
 .lato-regular {
   font-family: "Lato", sans-serif;
   font-weight: 200;
+  font-style: normal;
+
+  font-size: 128px;
+
+  line-height: 134.4px;
+  color: rgb(21, 22, 20);
+}
+.lato-regular2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   font-style: normal;
 
   font-size: 128px;
@@ -88,4 +103,18 @@ html.lenis body {
   transition-property: overflow;
   transition-duration: 1ms;
   transition-behavior: allow-discrete;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

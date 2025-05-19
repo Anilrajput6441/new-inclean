@@ -5,6 +5,11 @@ import "lenis/dist/lenis.css";
 import Lenis from "lenis";
 import { useEffect } from "react";
 import Thirddiv from "@/components/ThirdDiv/Thirddiv";
+import Strategy from "@/components/Strategy/strategy";
+
+import Stats from "@/components/Stats/Stats";
+import BrandMarquee from "@/components/BrandMarquee";
+// import Fourthdiv from "@/components/Fourthdiv/Fourthdiv";
 
 export default function Home() {
   useEffect(() => {
@@ -24,6 +29,10 @@ export default function Home() {
       <Hero />
       <VideoScrollSection />
       <Thirddiv />
+      {/* <Fourthdiv /> */}
+      <Strategy />
+      <Stats />
+      <BrandMarquee />
     </div>
   );
 }
