@@ -9,7 +9,8 @@ import Strategy from "@/components/Strategy/strategy";
 
 import Stats from "@/components/Stats/Stats";
 import BrandMarquee from "@/components/BrandMarquee";
-// import Fourthdiv from "@/components/Fourthdiv/Fourthdiv";
+import HorizontalSlider from "@/components/HorizontalSlider";
+import RecentWork from "@/components/RecentWork";
 
 export default function Home() {
   useEffect(() => {
@@ -33,6 +34,8 @@ export default function Home() {
       <Strategy />
       <Stats />
       <BrandMarquee />
+      <HorizontalSlider />
+      <RecentWork />
     </div>
   );
 }

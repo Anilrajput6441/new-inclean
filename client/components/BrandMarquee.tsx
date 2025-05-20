@@ -3,6 +3,7 @@
 
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import RevealOnScroll from "@/app/utils/RevealOnScroll";
 
 const logos = [
   "/Brandlogo/llyoed.svg",
@@ -24,18 +25,25 @@ const logos = [
 
 const BrandMarquee = () => {
   return (
-    <div className="py-6 bg-[#F7F7F7] ">
-      <Marquee
-        pauseOnHover
-        gradient={false}
-        speed={40} // adjust scroll speed
-      >
-        {logos.map((logo, index) => (
-          <div key={index} className="mx-8">
-            <Image src={logo} alt={`brand-${index}`} width={120} height={70} />
-          </div>
-        ))}
-      </Marquee>
+    <div className="py-6 pb-30 bg-[#F7F7F7] ">
+      <RevealOnScroll direction="up" delay={0.3}>
+        <Marquee
+          pauseOnHover
+          gradient={false}
+          speed={40} // adjust scroll speed
+        >
+          {logos.map((logo, index) => (
+            <div key={index} className="mx-8">
+              <Image
+                src={logo}
+                alt={`brand-${index}`}
+                width={120}
+                height={70}
+              />
+            </div>
+          ))}
+        </Marquee>
+      </RevealOnScroll>
     </div>
   );
 };
