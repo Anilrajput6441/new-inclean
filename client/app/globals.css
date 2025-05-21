@@ -33,6 +33,7 @@ body {
   overflow-y: scroll; /* allow scrolling */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar,
@@ -62,6 +63,7 @@ body::-webkit-scrollbar {
   line-height: 134.4px;
   color: rgb(21, 22, 20);
 }
+
 .lato-regular2 {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -124,4 +126,21 @@ html.lenis body {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  .lato-regular {
+    font-size: 64px;
+    line-height: 68px;
+  }
+  .lato-regular2 {
+    font-size: 64px;
+    line-height: 68px;
+    font-weight: 700;
+  }
+  .lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
 }

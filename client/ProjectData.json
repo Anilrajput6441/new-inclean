@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Industrial Ventilation System",
+    "description": "Advanced systems to control air quality, temperature, and humidity in large industrial spaces.",
+    "image": "/projectimg/industry.png"
+  },
+  {
+    "id": 2,
+    "title": "Fume Extraction System",
+    "description": "Efficiently removes hazardous fumes and pollutants at the source to ensure worker safety.",
+    "image": "/projectimg/fume.png"
+  },
+  {
+    "id": 3,
+    "title": "Parking Ventilation System",
+    "description": "Automated ventilation to remove vehicle exhaust and maintain breathable air in parking areas.",
+    "image": "/projectimg/parking.png"
+  },
+  {
+    "id": 4,
+    "title": "Centralized Air Conditioning",
+    "description": "Reliable cooling and heating system for multi-zone temperature control across large buildings.",
+    "image": "/projectimg/centralized.png"
+  },
+  {
+    "id": 5,
+    "title": "Lift-well Pressurization",
+    "description": "Maintains positive pressure in lift shafts to prevent smoke ingress during fire emergencies.",
+    "image": "/projectimg/lifftwell"
+  },
+  {
+    "id": 6,
+    "title": "Aircraft Hanger Ventilation",
+    "description": "Custom ventilation systems for large hangars to handle high air volumes and ensure safe operations.",
+    "image": "/projectimg/aircraft.png"
+  },
+  {
+    "id": 7,
+    "title": "Kitchen Exhaust Ventilation",
+    "description": "Removes grease, smoke, and odors from commercial kitchens for a clean and compliant setup.",
+    "image": "/projectimg/kitchensystem.png"
+  }
+]

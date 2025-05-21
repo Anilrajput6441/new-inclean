@@ -11,6 +11,7 @@ import Stats from "@/components/Stats/Stats";
 import BrandMarquee from "@/components/BrandMarquee";
 import HorizontalSlider from "@/components/HorizontalSlider";
 import RecentWork from "@/components/RecentWork";
+import AboutUs from "@/components/AboutUs";
 
 export default function Home() {
   useEffect(() => {
@@ -36,6 +37,7 @@ export default function Home() {
       <BrandMarquee />
       <HorizontalSlider />
       <RecentWork />
+      <AboutUs />
     </div>
   );
 }

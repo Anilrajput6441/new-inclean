@@ -4,8 +4,8 @@ import RevealOnScroll from "@/app/utils/RevealOnScroll";
 const Stats = () => {
   return (
     <RevealOnScroll direction="up" delay={0.3}>
-      <div className="flex p-30 bg-[#F7F7F7] ">
-        <div className="w-1/3 border-t-1 border-b-1 border-gray-400 pb-10 pt-5 flex flex-col justify-center items-center">
+      <div className="flex flex-col md:flex-row justify-center items-center p-30 bg-[#F7F7F7] ">
+        <div className="w-full md:w-1/3 border-t-1 border-b-1 border-gray-400 pb-10 pt-5 flex flex-col justify-center items-center">
           <div className="flex items-center justify-center">
             <CountUp
               from={0}
@@ -19,7 +19,7 @@ const Stats = () => {
           </div>
           <h1 className="lato-medium text-3xl">Years in Business</h1>
         </div>
-        <div className="w-1/3  border-t-1 border-b-1 border-gray-400   pb-10 pt-5 flex flex-col justify-center items-center">
+        <div className="w-full md:w-1/3  border-t-1 border-b-1 border-gray-400   pb-10 pt-5 flex flex-col justify-center items-center">
           <div className="flex items-center justify-center">
             <CountUp
               from={0}
@@ -33,7 +33,7 @@ const Stats = () => {
           </div>
           <h1 className="lato-medium text-3xl">Projects Completed</h1>
         </div>
-        <div className="w-1/3 border-t-1 border-b-1 border-gray-400  pb-10 pt-5 flex flex-col justify-center items-center">
+        <div className="w-full md:w-1/3 border-t-1 border-b-1 border-gray-400  pb-10 pt-5 flex flex-col justify-center items-center">
           <div className="flex items-center justify-center">
             <CountUp
               from={0}

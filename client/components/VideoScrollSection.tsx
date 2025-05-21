@@ -34,16 +34,16 @@ export default function VideoScrollSection() {
   return (
     <div
       ref={containerRef}
-      className="relative  h-screen w-full overflow-hidden bg-[#F7F7F7]"
+      className="relative  md:h-screen w-[100vw] overflow-hidden bg-[#F7F7F7]"
     >
-      <div className="relative h-screen">
+      <div className="relative h-[100vh] w-full md:h-screen">
         <video
           ref={videoRef}
           src="/Mastering Air Quality with Inclean_free.mp4"
           autoPlay
           muted
           loop
-          className="absolute z-1 w-full h-full bg-[#F7F7F7] rounded-2xl object-cover will-change-transform"
+          className="absolute z-1 w-full h-full bg-[#F7F7F7] md:rounded-2xl object-cover will-change-transform"
         />
       </div>
     </div>

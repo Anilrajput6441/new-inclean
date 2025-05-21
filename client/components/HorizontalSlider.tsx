@@ -60,7 +60,7 @@ export default function HorizontalRevealScroll() {
     >
       <div className="flex h-screen">
         {/* LEFT TEXT COLUMN */}
-        <div className="w-1/2  h-full flex items-center justify-center sticky top-0 bg-black">
+        <div className="w-[70%] md:w-1/2  h-full flex items-center justify-center sticky top-0 bg-black">
           <div ref={textRef} className="space-y-6 text-center px-10">
             <h2 className="text-5xl font-semibold leading-tight text-gray-200">
               Our
@@ -80,7 +80,7 @@ export default function HorizontalRevealScroll() {
         {/* RIGHT SCROLLING CARDS */}
         <div
           ref={trackRef}
-          className="flex w-[40vw]  items-center gap-10 pl-20 pr-10 will-change-transform"
+          className="flex w-[30%] md:w-[40vw]  items-center gap-10 md:pl-20 pr-10 will-change-transform"
         >
           {products.map((product) => (
             <RevealOnScroll key={product.id} direction="up" delay={0.3}>
