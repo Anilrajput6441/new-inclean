@@ -9,7 +9,7 @@ const AboutUs = () => {
           About us
         </h1>
 
-        <div className="flex flex-col md:flex-row w-full h-screen">
+        <div className="flex flex-col md:flex-row w-full mb-15 md:mb-0 h-screen">
           <div className="w-full md:w-[20%] h-full text-xl pt-10 text-center">
             <span className="border-b-1 px-3 ">Inclean </span>
             <br />
@@ -55,7 +55,7 @@ const AboutUs = () => {
             />
           </div>
         </div>
-        <div className="h-[70vh] flex flex-col justify-center items-center gap-10 border-t-1 border-gray-400">
+        <div className="h-[50vh] md:h-[70vh]   flex flex-col justify-center items-center gap-10 border-t-1 border-gray-400">
           <h1 className="lato-regular">Let’s work together</h1>
           <button className="relative overflow-hidden px-12 py-3  lato-medium text-[24px] rounded-full lato-medium bg-black text-white  hover:text-black group ">
             <span className="relative z-10">Say Hello →</span>

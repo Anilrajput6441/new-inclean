@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import products from "@/ProductData.json";
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
+import Link from "next/link";
 
 export default function HorizontalRevealScroll() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -71,9 +72,12 @@ export default function HorizontalRevealScroll() {
               INCLEAN is proud of itsequipments that works efficiently in
               various geographic location
             </p>
-            <button className="text-orange-500 font-bold text-lg inline-flex items-center gap-2 hover:text-zinc-500 cursor-pointer border-b-1 pl-4 ">
+            <Link
+              href="/Product"
+              className="text-orange-500 font-bold text-lg inline-flex items-center gap-2 hover:text-zinc-500 cursor-pointer border-b-1 pl-4 "
+            >
               Read More <span className="text-2xl">↗</span>
-            </button>
+            </Link>
           </div>
         </div>
 

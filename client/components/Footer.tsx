@@ -4,13 +4,13 @@ import { Instagram, Twitter, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="h-[30vh] w-full bg-[#F7F7F7] ">
-      <div className="h-[40%] w-full pl-25">
+    <div className="h-[25vh] md:h-[35vh] w-full  bg-[#F7F7F7] ">
+      <div className="h-[40%] pt-7   w-full pl-10 md:pl-25">
         <div className="p-1 rounded-full w-13 h-13 animate-float flex justify-center items-center text-3xl  font-semibold font-mono bg-[#EAEAEA] ">
           ↑
         </div>
       </div>
-      <div className="h-[60%] w-full flex justify-between px-20 items-center">
+      <div className="h-[60%] w-full flex justify-between px-10 md:px-20 items-center">
         <Image
           src="/incleanlogo.png"
           alt="inclean logo"
