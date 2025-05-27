@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
+import Link from "next/link";
 
 const Thirddiv = () => {
   return (
@@ -18,7 +19,10 @@ const Thirddiv = () => {
               temperature, humidity, and air quality to ensure optimal indoor
               comfort and energy performance.
             </p>
-            <div className="flex items-center  cursor-pointer w-38 ml-10 mt-5 hover:text-blue-600 ">
+            <Link
+              href="/Product/ahu"
+              className="flex items-center  cursor-pointer w-38 ml-10 mt-5 hover:text-blue-600 "
+            >
               <button className=" lato-medium pr-5 cursor-pointer">
                 Read More..
               </button>
@@ -29,7 +33,7 @@ const Thirddiv = () => {
                 alt="Cool animation"
                 className="border-1 h-10 w-10 "
               />
-            </div>
+            </Link>
           </div>
           <div className="w-full md:w-[50%] right-0 flex justify-end h-full animate-float">
             <Image
@@ -56,7 +60,10 @@ const Thirddiv = () => {
               industrial and commercial spaces seeking sustainable cooling
               solutions.
             </p>
-            <div className="flex items-center cursor-pointer w-38 ml-10 mt-5 hover:text-blue-600">
+            <Link
+              href="/Product/ecu"
+              className="flex items-center cursor-pointer w-38 ml-10 mt-5 hover:text-blue-600"
+            >
               <button className="lato-medium pr-5 cursor-pointer">
                 Read More..
               </button>
@@ -67,11 +74,11 @@ const Thirddiv = () => {
                 alt="Cool animation"
                 className="border-1 h-10 w-10"
               />
-            </div>
+            </Link>
           </div>
-          <div className="w-full md:w-[50%] right-0 flex justify-end h-full animate-float">
+          <div className="w-full md:w-[50%] right-0 md:mt-15 flex justify-end h-full animate-float">
             <Image
-              src="/productimg/ahu unit.png"
+              src="/productimg/ecudouble.png"
               alt="ahu unit"
               height={500}
               width={500}

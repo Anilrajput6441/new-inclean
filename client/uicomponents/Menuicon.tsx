@@ -40,7 +40,7 @@ const Hamburger = () => {
       <div
         className={`${styles.container} ${
           active ? styles.active : ""
-        } fixed top-6 right-6 z-[60]`}
+        } fixed  z-[60]`}
         onClick={() => setActive(!active)}
       >
         <svg
