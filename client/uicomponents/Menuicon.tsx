@@ -15,12 +15,12 @@ const Hamburger = () => {
       image:
         "https://s3-ap-south-1.amazonaws.com/static.awfis.com/wp-content/uploads/2017/07/07184649/ProjectManagement.jpg",
     },
-    {
-      link: "/Product",
-      text: "Products",
-      image:
-        "https://www.shutterstock.com/image-illustration/product-word-cloud-collage-business-260nw-755479927.jpg",
-    },
+    // {
+    //   link: "/Product",
+    //   text: "Products",
+    //   image:
+    //     "https://www.shutterstock.com/image-illustration/product-word-cloud-collage-business-260nw-755479927.jpg",
+    // },
     {
       link: "/About",
       text: "About Us",

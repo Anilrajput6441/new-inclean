@@ -11,13 +11,14 @@ const RecentWork = () => {
   return (
     <div className="relative z-10 p-5 md:p-20 bg-[#F7F7F7] pt-20">
       <CustomCursor active={isHovering} />
-      <h1 className="lato-medium text-[40px] md:text-[100px]  text-center md:text-start md:pl-25 border-b-1  border-gray-400 mb-2">
+      <h1 className="lato-medium text-[40px] md:text-[60px]  text-center md:text-start md:pl-25 border-b-1  border-gray-400 mb-2">
         Work Gallery!
       </h1>
       <div className=" pt-10 flex flex-col gap-8">
         <RevealOnScroll direction="up" delay={0.3}>
           <div className="w-full flex flex-col md:flex-row gap-8">
-            <div
+            <Link
+              href="/Project/Project1"
               className="w-full md:w-1/2 h-full md:h-[80vh] rounded-2xl overflow-hidden lato-medium"
               onMouseEnter={() => {
                 setIsHovering(true);
@@ -42,9 +43,10 @@ const RecentWork = () => {
                 Advanced systems to control air quality, temperature, and
                 humidity in large industrial spaces
               </p>
-            </div>
+            </Link>
 
-            <div
+            <Link
+              href="/Project/Project2"
               className="w-full md:w-1/2 h-full md:h-[80vh]  rounded-2xl overflow-hidden lato-medium"
               onMouseEnter={() => {
                 setIsHovering(true);
@@ -69,12 +71,13 @@ const RecentWork = () => {
                 Removes grease, smoke, and odors from commercial kitchens for a
                 clean and compliant setup.
               </p>
-            </div>
+            </Link>
           </div>
         </RevealOnScroll>
         <RevealOnScroll direction="up" delay={0.3}>
           <div className="w-full flex flex-col md:flex-row gap-8 ">
-            <div
+            <Link
+              href="/Project/Project3"
               className="w-full md:w-1/2 h-full md:h-[80vh] rounded-2xl overflow-hidden lato-medium"
               onMouseEnter={() => {
                 setIsHovering(true);
@@ -99,8 +102,9 @@ const RecentWork = () => {
                 Reliable cooling and heating system for multi-zone temperature
                 control across large buildings.
               </p>
-            </div>
-            <div
+            </Link>
+            <Link
+              href="/Project/Project4"
               className="w-full md:w-1/2 h-full md:h-[80vh] overflow-hidden lato-medium"
               onMouseEnter={() => {
                 setIsHovering(true);
@@ -125,7 +129,7 @@ const RecentWork = () => {
                 Custom ventilation systems for large hangars to handle high air
                 volumes and ensure safe operations.
               </p>
-            </div>
+            </Link>
           </div>
         </RevealOnScroll>
       </div>
