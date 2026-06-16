@@ -4,9 +4,9 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import products from "@/ProductData.json";
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import Link from "next/link";
+import { products } from "@/data/siteContent";
 
 export default function HorizontalRevealScroll() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -88,16 +88,19 @@ export default function HorizontalRevealScroll() {
         >
           {products.map((product) => (
             <RevealOnScroll key={product.id} direction="up" delay={0.3}>
-              <div className="w-[300px] h-[400px] shrink-0 bg-[#F7F7F7]  text-black rounded-3xl p-6 shadow-lg  flex flex-col items-center justify-center hover:scale-[1.03] transition">
+              <Link
+                href={`/Product/${product.slug}`}
+                className="w-[300px] h-[400px] shrink-0 bg-[#F7F7F7] text-black rounded-3xl p-6 shadow-lg flex flex-col items-center justify-center hover:scale-[1.03] transition"
+              >
                 <Image
                   src={product.image}
                   alt={product.name}
                   width={220}
                   height={220}
-                  className="mb-4"
+                  className="mb-4 h-[220px] w-[220px] object-cover"
                 />
                 <p className="text-xl font-semibold">{product.name}</p>
-              </div>
+              </Link>
             </RevealOnScroll>
           ))}
         </div>

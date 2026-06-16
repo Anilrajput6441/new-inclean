@@ -15,12 +15,11 @@ const Hamburger = () => {
       image:
         "https://s3-ap-south-1.amazonaws.com/static.awfis.com/wp-content/uploads/2017/07/07184649/ProjectManagement.jpg",
     },
-    // {
-    //   link: "/Product",
-    //   text: "Products",
-    //   image:
-    //     "https://www.shutterstock.com/image-illustration/product-word-cloud-collage-business-260nw-755479927.jpg",
-    // },
+    {
+      link: "/Product",
+      text: "Products",
+      image: "/wp-content/uploads/2020/06/HAV.jpg",
+    },
     {
       link: "/About",
       text: "About Us",
@@ -28,7 +27,7 @@ const Hamburger = () => {
         "https://cdn.vectorstock.com/i/500p/54/96/about-us-button-web-banner-templates-vector-54215496.jpg",
     },
     {
-      link: "Contact",
+      link: "/Contact",
       text: "Contact Us",
       image:
         "https://www.shutterstock.com/image-vector/contact-us-vector-banner-word-600nw-1084565024.jpg",

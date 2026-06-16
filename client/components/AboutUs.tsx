@@ -13,7 +13,7 @@ const AboutUs = () => {
           <div className="w-full md:w-[20%] h-full text-xl pt-10 text-center">
             <span className="border-b-1 px-3 ">Inclean </span>
             <br />
-            <span className="text-sm ">Catch Beathe</span>
+            <span className="text-sm ">We care about your air</span>
           </div>
           <div className="w-full md:w-[45%] h-full  flex flex-col gap-8 md:p-4">
             <h1 className="lato-medium text-4xl font-semibold ">
@@ -23,25 +23,21 @@ const AboutUs = () => {
               <span className="lato-bold text-5xl md:text-8xl">WE ARE ?</span>
             </h1>
             <p>
-              The harsh climate and fast-growing need for quality indoor
-              environment serve as the foundation behind INCLEAN. One of the
-              region&apos;s leading HVAC (Heating, Ventilation and Air
-              Conditioning) solution provider to commercial, industrial and
-              government bodies across India and Beyond
+              Inclean is one of the trusted HVAC companies offering heating,
+              ventilation, air-conditioning, cooling, and exhaust solutions to
+              industrial, residential, commercial, and government bodies.
             </p>
             <p>
-              INCLEAN excels in the field of Air Engineering, we have expertise
-              in field Air engineering like designing & supplying of industrial
-              / commercial Axial Flow Fans, Centrifugal Blowers, Fire Rated
-              Fans, Basement Ventilation fans & Fresh Air units. Apart from
-              these products, we also undertake turnkey projects in the field of
-              Industrial / Commercial exhaust &Ventilation Systems
+              Founded around the growing need for high-quality indoor
+              environments, Inclean focuses on fresh air, comfort, and reliable
+              engineering. Our team designs and supplies axial flow fans,
+              centrifugal blowers, fire rated fans, basement ventilation fans,
+              fresh air units, and custom HVAC equipment.
             </p>
             <p>
-              INCLEAN is providing a complete engineering solutions in the field
-              of ventilation and exhaust and also providing the extensive
-              consulting after analyzing project with proper one window
-              solution. We specialize in custom built HVAC Equipment
+              We also undertake turnkey industrial and commercial exhaust and
+              ventilation projects, backed by consulting, project analysis, and
+              one-window engineering support.
             </p>
           </div>
           <div className="w-[35%] hidden md:flex h-full p-5">

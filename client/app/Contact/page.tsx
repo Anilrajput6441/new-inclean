@@ -2,6 +2,7 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import RecentWork from "@/components/RecentWork";
+import { contactInfo } from "@/data/siteContent";
 
 const page = () => {
   return (
@@ -12,13 +13,14 @@ const page = () => {
           <h1 className="lato-medium text-2xl md:text-3xl">Contact us</h1>
         </div>
         <div className="w-1/2 h-full flex flex-col justify-center">
-          <h1 className="lato-medium text-2xl md:text-3xl">London, UK</h1>
+          <h1 className="lato-medium text-2xl md:text-3xl">Surat, Gujarat</h1>
+          <p className="pt-4 text-gray-700">{contactInfo.address}</p>
           <div className="group flex items-center pt-5">
             <a
-              href="mailto:INFO@INCLEAN.IN"
+              href={`mailto:${contactInfo.email}`}
               className="underline group-hover:text-cyan-500 lato-light md:text-3xl"
             >
-              INFO@INCLEAN.IN
+              {contactInfo.email}
             </a>
             <ArrowUpRight className="w-10 h-10 group-hover:rotate-45 group-hover:text-cyan-500 text-black" />
           </div>
@@ -35,10 +37,10 @@ const page = () => {
           </h1>
           <div className="group flex items-center pt-5">
             <a
-              href="tel:+919871348767"
+              href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}
               className="underline group-hover:text-cyan-500 lato-light md:text-3xl"
             >
-              +91-9871348767
+              {contactInfo.phone}
             </a>
             <ArrowUpRight className="w-4 md:w-10 h-4md:h-10 group-hover:rotate-45 group-hover:text-cyan-500 text-black" />
           </div>
@@ -60,7 +62,7 @@ const page = () => {
               rel="noopener noreferrer"
               className="underline hover:text-cyan-500 md:text-3xl font-light"
             >
-              www.inclean.in
+              {contactInfo.website}
             </a>
             <ArrowUpRight className="w-10 h-10 group-hover:rotate-45 group-hover:text-cyan-500 text-black" />
           </div>

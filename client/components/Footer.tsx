@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { Instagram, Twitter, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { contactInfo } from "@/data/siteContent";
 
 const Footer = () => {
   return (
@@ -18,9 +19,22 @@ const Footer = () => {
           height={80}
           className=""
         />
+        <div className="hidden max-w-lg text-sm text-gray-700 md:block">
+          <p>{contactInfo.address}</p>
+          <p>{contactInfo.email}</p>
+          <p>{contactInfo.phone}</p>
+        </div>
         <div className="flex gap-4">
+          <a href={`mailto:${contactInfo.email}`} aria-label="Email Inclean">
+            <Mail className="w-8 h-8 text-gray-600 hover:text-cyan-500" />
+          </a>
+          <a
+            href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}
+            aria-label="Call Inclean"
+          >
+            <Phone className="w-8 h-8 text-gray-600 hover:text-cyan-500" />
+          </a>
           <Instagram className="w-8 h-8 text-gray-600 hover:text-pink-500" />
-          <Twitter className="w-8 h-8 text-gray-600 hover:text-blue-400" />
           <Linkedin className="w-8 h-8 text-gray-600 hover:text-blue-600" />
         </div>
       </div>

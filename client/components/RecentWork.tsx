@@ -6,8 +6,12 @@ import { useState } from "react";
 import CustomCursor from "@/app/utils/CustomCursorHover";
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import Link from "next/link";
+import { projects } from "@/data/siteContent";
+
 const RecentWork = () => {
   const [isHovering, setIsHovering] = useState(false);
+  const featuredProjects = projects.slice(0, 4);
+
   return (
     <div className="relative z-10 p-5 md:p-20 bg-[#F7F7F7] pt-20">
       <CustomCursor active={isHovering} />
@@ -15,123 +19,39 @@ const RecentWork = () => {
         Work Gallery!
       </h1>
       <div className=" pt-10 flex flex-col gap-8">
-        <RevealOnScroll direction="up" delay={0.3}>
-          <div className="w-full flex flex-col md:flex-row gap-8">
-            <Link
-              href="/Project/Project1"
-              className="w-full md:w-1/2 h-full md:h-[80vh] rounded-2xl overflow-hidden lato-medium"
-              onMouseEnter={() => {
-                setIsHovering(true);
-                document.body.style.cursor = "none";
-              }}
-              onMouseLeave={() => {
-                setIsHovering(false);
-                document.body.style.cursor = "auto";
-              }}
-            >
-              <div className="overflow-hidden h-[80%] rounded-2x pb-2">
-                <Image
-                  src="/projectimg/industry.png"
-                  alt="industry"
-                  height={300}
-                  width={300}
-                  className="h-full w-full object-cover rounded-2xl transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-              <h1 className="text-3xl pl-5">Industrial Ventilation System</h1>
-              <p className="pl-5">
-                Advanced systems to control air quality, temperature, and
-                humidity in large industrial spaces
-              </p>
-            </Link>
-
-            <Link
-              href="/Project/Project2"
-              className="w-full md:w-1/2 h-full md:h-[80vh]  rounded-2xl overflow-hidden lato-medium"
-              onMouseEnter={() => {
-                setIsHovering(true);
-                document.body.style.cursor = "none";
-              }}
-              onMouseLeave={() => {
-                setIsHovering(false);
-                document.body.style.cursor = "auto";
-              }}
-            >
-              <div className="overflow-hidden h-[80%] rounded-2xl pb-2">
-                <Image
-                  src="/projectimg/kitchensystem.png"
-                  alt="industry"
-                  height={300}
-                  width={300}
-                  className="h-full w-full  rounded-2xl transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-              <h1 className="text-3xl pl-5">Kitchen Exhaust Ventilation</h1>
-              <p className="pl-5">
-                Removes grease, smoke, and odors from commercial kitchens for a
-                clean and compliant setup.
-              </p>
-            </Link>
-          </div>
-        </RevealOnScroll>
-        <RevealOnScroll direction="up" delay={0.3}>
-          <div className="w-full flex flex-col md:flex-row gap-8 ">
-            <Link
-              href="/Project/Project3"
-              className="w-full md:w-1/2 h-full md:h-[80vh] rounded-2xl overflow-hidden lato-medium"
-              onMouseEnter={() => {
-                setIsHovering(true);
-                document.body.style.cursor = "none";
-              }}
-              onMouseLeave={() => {
-                setIsHovering(false);
-                document.body.style.cursor = "auto";
-              }}
-            >
-              <div className="overflow-hidden h-[80%] rounded-2xl pb-2">
-                <Image
-                  src="/projectimg/cetralizedimg.jpeg"
-                  alt="industry"
-                  height={300}
-                  width={300}
-                  className="h-full w-full  rounded-2xl transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-              <h1 className="text-3xl pl-5">Centralized Air Conditioning</h1>
-              <p className="pl-5">
-                Reliable cooling and heating system for multi-zone temperature
-                control across large buildings.
-              </p>
-            </Link>
-            <Link
-              href="/Project/Project4"
-              className="w-full md:w-1/2 h-full md:h-[80vh] overflow-hidden lato-medium"
-              onMouseEnter={() => {
-                setIsHovering(true);
-                document.body.style.cursor = "none";
-              }}
-              onMouseLeave={() => {
-                setIsHovering(false);
-                document.body.style.cursor = "auto";
-              }}
-            >
-              <div className="overflow-hidden h-[80%] rounded-2xl pb-2">
-                <Image
-                  src="/projectimg/aircrraft.png"
-                  alt="industry"
-                  height={300}
-                  width={300}
-                  className="h-full w-full  rounded-2xl transition-transform duration-500 hover:scale-110 "
-                />
-              </div>
-              <h1 className="text-3xl pl-5">Aircraft Hanger Ventilation</h1>
-              <p className="pl-5">
-                Custom ventilation systems for large hangars to handle high air
-                volumes and ensure safe operations.
-              </p>
-            </Link>
-          </div>
-        </RevealOnScroll>
+        {[0, 2].map((start) => (
+          <RevealOnScroll key={start} direction="up" delay={0.3}>
+            <div className="w-full flex flex-col md:flex-row gap-8">
+              {featuredProjects.slice(start, start + 2).map((project) => (
+                <Link
+                  key={project.title}
+                  href={project.href}
+                  className="w-full md:w-1/2 h-full md:h-[80vh] rounded-2xl overflow-hidden lato-medium"
+                  onMouseEnter={() => {
+                    setIsHovering(true);
+                    document.body.style.cursor = "none";
+                  }}
+                  onMouseLeave={() => {
+                    setIsHovering(false);
+                    document.body.style.cursor = "auto";
+                  }}
+                >
+                  <div className="overflow-hidden h-[80%] rounded-2xl pb-2">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      height={600}
+                      width={900}
+                      className="h-full w-full object-cover rounded-2xl transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <h1 className="text-3xl pl-5">{project.title}</h1>
+                  <p className="pl-5">{project.summary}</p>
+                </Link>
+              ))}
+            </div>
+          </RevealOnScroll>
+        ))}
       </div>
       <div className="mt-5 md:mt-0 w-full flex justify-center  items-center">
         <Link

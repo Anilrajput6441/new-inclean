@@ -9,7 +9,7 @@ const page = () => {
       <div className="h-[100vh] w-[100vw]  pt-15 flex flex-col md:flex-row">
         <RevealOnScroll direction="up" delay={0.2}>
           <div className="lato-regular  w-full h-full md:w-[60vw] pl-10 pt-30 md:pl-20  md:text-[108px]">
-            Kitechen Exhaust Ventilation <br />{" "}
+            Kitchen Exhaust Ventilation <br />{" "}
             {/* <span className="text-3xl">The Heart of HVAC Systems</span> */}
           </div>
         </RevealOnScroll>
