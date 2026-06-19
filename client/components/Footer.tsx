@@ -5,26 +5,27 @@ import { contactInfo } from "@/data/siteContent";
 
 const Footer = () => {
   return (
-    <div className="h-[25vh] md:h-[35vh] w-full  bg-[#F7F7F7] ">
-      <div className="h-[40%] pt-7   w-full pl-10 md:pl-25">
+    <footer className="w-full bg-[#F7F7F7] px-5 py-8 sm:px-8 lg:min-h-[35vh] lg:px-20">
+      <div className="w-full pb-8 lg:pb-12 lg:pl-5">
         <div className="p-1 rounded-full w-13 h-13 animate-float flex justify-center items-center text-3xl  font-semibold font-mono bg-[#EAEAEA] ">
           ↑
         </div>
       </div>
-      <div className="h-[60%] w-full flex justify-between px-10 md:px-20 items-center">
+      <div className="flex w-full flex-col items-center justify-between gap-7 border-t border-gray-300 pt-7 sm:flex-row">
         <Image
           src="/incleanlogo.png"
           alt="inclean logo"
           width={80}
           height={80}
+          loading="lazy"
           className=""
         />
-        <div className="hidden max-w-lg text-sm text-gray-700 md:block">
+        <div className="max-w-lg text-center text-sm text-gray-700 sm:text-left">
           <p>{contactInfo.address}</p>
           <p>{contactInfo.email}</p>
           <p>{contactInfo.phone}</p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <a href={`mailto:${contactInfo.email}`} aria-label="Email Inclean">
             <Mail className="w-8 h-8 text-gray-600 hover:text-cyan-500" />
           </a>
@@ -38,7 +39,7 @@ const Footer = () => {
           <Linkedin className="w-8 h-8 text-gray-600 hover:text-blue-600" />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

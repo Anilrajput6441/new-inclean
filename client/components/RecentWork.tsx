@@ -13,50 +13,53 @@ const RecentWork = () => {
   const featuredProjects = projects.slice(0, 4);
 
   return (
-    <div className="relative z-10 p-5 md:p-20 bg-[#F7F7F7] pt-20">
+    <section className="relative z-10 bg-[#F7F7F7] px-4 py-14 sm:px-8 sm:py-20 lg:p-20">
       <CustomCursor active={isHovering} />
-      <h1 className="lato-medium text-[40px] md:text-[60px]  text-center md:text-start md:pl-25 border-b-1  border-gray-400 mb-2">
+      <h1 className="lato-medium mb-2 border-b border-gray-400 pb-3 text-center text-4xl sm:text-5xl lg:pl-25 lg:text-left lg:text-[60px]">
         Work Gallery!
       </h1>
-      <div className=" pt-10 flex flex-col gap-8">
+      <div className="flex flex-col gap-10 pt-8 sm:pt-10 lg:gap-8">
         {[0, 2].map((start) => (
           <RevealOnScroll key={start} direction="up" delay={0.3}>
-            <div className="w-full flex flex-col md:flex-row gap-8">
+            <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2">
               {featuredProjects.slice(start, start + 2).map((project) => (
                 <Link
                   key={project.title}
                   href={project.href}
-                  className="w-full md:w-1/2 h-full md:h-[80vh] rounded-2xl overflow-hidden lato-medium"
+                  className="lato-medium group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl lg:h-[80vh]"
                   onMouseEnter={() => {
                     setIsHovering(true);
-                    document.body.style.cursor = "none";
+                    if (window.matchMedia("(hover: hover)").matches) {
+                      document.body.style.cursor = "none";
+                    }
                   }}
                   onMouseLeave={() => {
                     setIsHovering(false);
                     document.body.style.cursor = "auto";
                   }}
                 >
-                  <div className="overflow-hidden h-[80%] rounded-2xl pb-2">
+                  <div className="aspect-[4/3] overflow-hidden rounded-2xl lg:h-[80%] lg:aspect-auto">
                     <Image
                       src={project.image}
                       alt={project.title}
                       height={600}
                       width={900}
-                      className="h-full w-full object-cover rounded-2xl transition-transform duration-500 hover:scale-110"
+                      loading="lazy"
+                      className="h-full w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <h1 className="text-3xl pl-5">{project.title}</h1>
-                  <p className="pl-5">{project.summary}</p>
+                  <h2 className="px-2 pt-4 text-2xl sm:text-3xl">{project.title}</h2>
+                  <p className="px-2 pt-1 leading-relaxed">{project.summary}</p>
                 </Link>
               ))}
             </div>
           </RevealOnScroll>
         ))}
       </div>
-      <div className="mt-5 md:mt-0 w-full flex justify-center  items-center">
+      <div className="mt-12 flex w-full items-center justify-center lg:mt-16">
         <Link
           href="/Project"
-          className="relative  overflow-hidden px-12 py-3  lato-medium text-[24px] rounded-full lato-medium bg-black text-white  hover:text-black group "
+          className="group relative overflow-hidden rounded-full bg-black px-8 py-3 text-lg text-white hover:text-black sm:px-12 sm:text-2xl"
         >
           <span className="relative z-10">View all work →</span>
 
@@ -65,7 +68,7 @@ const RecentWork = () => {
           </span>
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

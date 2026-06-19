@@ -18,12 +18,19 @@ const Page = () => {
         </RevealOnScroll>
         <RevealOnScroll direction="down" delay={0.2}>
           <div className="w-[300px] h-auto ml-10  md:ml-20 mt-15 md:mt-5">
-            <Image
-              src="/icons8-double-down.gif"
-              width={50}
-              height={50}
-              alt="Cool animation"
-            />
+            <svg
+              viewBox="0 0 50 50"
+              className="h-[50px] w-[50px]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 12.5 25 28.5 41 12.5" />
+              <path d="M9 23.5 25 39.5 41 23.5" />
+            </svg>
           </div>
         </RevealOnScroll>
       </div>
@@ -56,6 +63,7 @@ const Page = () => {
                         alt={project.title}
                         height={600}
                         width={900}
+                        loading="lazy"
                         className="h-full w-full object-cover rounded-2xl transition-transform duration-500 hover:scale-110"
                       />
                     </div>

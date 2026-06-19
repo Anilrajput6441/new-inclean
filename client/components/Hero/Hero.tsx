@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useLayoutEffect, useRef } from "react";
-import Image from "next/image";
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 
 const Hero = () => {
@@ -52,7 +51,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[100vh] overflow-hidden pt-35 bg-[#F7F7F7]">
+    <section className="relative flex min-h-[100svh] flex-col justify-between overflow-hidden bg-[#F7F7F7] px-5 pb-10 pt-28 sm:px-10 sm:pt-36 lg:justify-center lg:px-20 lg:pb-14 lg:pt-40">
       <svg
         ref={svgRef}
         width="1200"
@@ -60,7 +59,7 @@ const Hero = () => {
         viewBox="0 0 1200 720"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full scale-125 object-cover opacity-18 md:scale-100 [&_circle]:opacity-0 [&_line]:opacity-0 [&_path]:opacity-0 [&_rect]:opacity-0"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full scale-[1.8] opacity-18 sm:scale-150 lg:scale-100 [&_circle]:opacity-0 [&_line]:opacity-0 [&_path]:opacity-0 [&_rect]:opacity-0"
         aria-hidden="true"
       >
         <g
@@ -235,38 +234,56 @@ const Hero = () => {
       </svg>
 
       <RevealOnScroll direction="up" delay={0.2}>
-        <div className="relative z-10 lato-regular w-full md:w-[62%] pl-10 pt-30 md:pl-20  md:text-[128px]">
+        <h1 className="relative z-10 max-w-[9ch] font-['Lato',sans-serif] text-[clamp(4.5rem,19vw,5.5rem)] font-light leading-[0.9] tracking-[-0.055em] sm:text-[clamp(5rem,13vw,6rem)] lg:text-[clamp(6rem,8.5vw,8rem)] lg:leading-[0.98] lg:tracking-[-0.04em]">
           Mastering Air With Precision
-        </div>
+        </h1>
       </RevealOnScroll>
       <RevealOnScroll direction="down" delay={0.2}>
-        <div className="relative z-10 w-[85%] flex justify-between  h-auto ml-10  md:ml-20 mt-15 md:mt-5">
-          <div className="flex flex-col justify-center items-center ">
-            {" "}
-            <Image
-              src="/icons8-double-down.gif"
-              width={500}
-              height={500}
-              alt="Cool animation"
-              className="h-15 w-15"
-            />
+        <div className="relative z-10 flex w-full max-w-5xl items-end justify-between gap-6 lg:mt-8">
+          <div className="flex flex-col items-center justify-center text-sm sm:text-base">
+            <svg
+              viewBox="0 0 50 50"
+              className="h-12 w-12 sm:h-15 sm:w-15"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 12.5 25 28.5 41 12.5" />
+              <path d="M9 23.5 25 39.5 41 23.5" />
+            </svg>
             Scroll Down
           </div>
 
-          <a href="/incleandoc.pdf" target="_blank" rel="noopener noreferrer">
-            <div className="flex flex-col justify-center items-center cursor-pointer">
-              <Image
-                src="/icons8-download.gif"
-                width={50}
-                height={50}
-                alt="Cool animation"
-              />
+          <a
+            href="/incleandoc.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center text-sm sm:text-base"
+          >
+            <div className="flex cursor-pointer flex-col items-center justify-center">
+              <svg
+                viewBox="0 0 50 50"
+                className="h-11 w-11 sm:h-[50px] sm:w-[50px]"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M25 6v26" />
+                <path d="m16.5 23.5 8.5 8.5 8.5-8.5" />
+                <path d="M14 17H8.5v26h33V17H36" />
+              </svg>
               HVAC Guide
             </div>
           </a>
         </div>
       </RevealOnScroll>
-    </div>
+    </section>
   );
 };
 

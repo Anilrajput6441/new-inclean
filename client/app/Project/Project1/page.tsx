@@ -19,6 +19,7 @@ const page = () => {
               width={700}
               height={730}
               alt="Cool animation"
+              loading="lazy"
               className="h-full border-2 w-full object-cover drop-shadow-[25rem] rounded-3xl "
             />
           </div>

@@ -22,55 +22,62 @@ export default function HorizontalRevealScroll() {
 
     if (!section || !track || !text) return;
 
-    const totalScroll = track.scrollWidth - window.innerWidth * 0.5;
+    const media = gsap.matchMedia();
 
-    const ctx = gsap.context(() => {
-      // Horizontal scroll
-      gsap.to(track, {
-        x: () => -totalScroll,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: () => `+=${totalScroll}`,
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
-        },
-      });
+    media.add("(min-width: 1024px)", () => {
+      const totalScroll = () =>
+        Math.max(0, track.scrollWidth - window.innerWidth * 0.5);
 
-      // Fade out text as cards move over
-      gsap.to(text, {
-        opacity: 0,
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: () => `+=${totalScroll * 0.5}`,
-          scrub: true,
-        },
-      });
-    }, section);
+      const ctx = gsap.context(() => {
+        gsap.to(track, {
+          x: () => -totalScroll(),
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: () => `+=${totalScroll()}`,
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+          },
+        });
 
-    return () => ctx.revert();
+        gsap.to(text, {
+          opacity: 0,
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: () => `+=${totalScroll() * 0.5}`,
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        });
+      }, section);
+
+      return () => ctx.revert();
+    });
+
+    return () => media.revert();
   }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen bg-black  text-white"
+      className="relative bg-black text-white lg:h-screen"
     >
-      <div className="flex h-screen">
+      <div className="flex flex-col py-16 sm:py-20 lg:h-screen lg:flex-row lg:py-0">
         {/* LEFT TEXT COLUMN */}
-        <div className="w-[70%] md:w-1/2  h-full flex items-center justify-center sticky top-0 bg-black">
-          <div ref={textRef} className="space-y-6 text-center px-10">
-            <h2 className="text-5xl font-semibold leading-tight text-gray-200">
+        <div className="flex w-full items-center justify-center bg-black lg:sticky lg:top-0 lg:h-full lg:w-1/2">
+          <div ref={textRef} className="max-w-xl space-y-5 px-6 text-center sm:space-y-6 sm:px-10">
+            <h2 className="text-4xl font-semibold leading-tight text-gray-200 sm:text-5xl xl:text-6xl">
               Our
               <br />
               Products
             </h2>
-            <p className="text-gray-400 text-sm">
-              INCLEAN is proud of itsequipments that works efficiently in
-              various geographic location
+            <p className="text-sm leading-relaxed text-gray-400 sm:text-base">
+              INCLEAN is proud of its equipment that works efficiently across
+              various geographic locations.
             </p>
             <Link
               href="/Product"
@@ -78,30 +85,40 @@ export default function HorizontalRevealScroll() {
             >
               Read More <span className="text-2xl">↗</span>
             </Link>
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-500 lg:hidden">
+              Swipe to explore
+            </p>
           </div>
         </div>
 
         {/* RIGHT SCROLLING CARDS */}
         <div
           ref={trackRef}
-          className="flex w-[30%] md:w-[40vw]  items-center gap-10 md:pl-20 pr-10 will-change-transform"
+          aria-label="Product carousel"
+          className="mt-10 flex w-full touch-pan-x snap-x snap-mandatory items-center gap-4 overflow-x-auto overscroll-x-contain px-[9vw] pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-6 sm:px-[12vw] lg:mt-0 lg:w-[40vw] lg:gap-10 lg:overflow-visible lg:px-0 lg:pb-0 lg:pl-20 lg:pr-10 lg:will-change-transform"
         >
           {products.map((product) => (
-            <RevealOnScroll key={product.id} direction="up" delay={0.3}>
-              <Link
-                href={`/Product/${product.slug}`}
-                className="w-[300px] h-[400px] shrink-0 bg-[#F7F7F7] text-black rounded-3xl p-6 shadow-lg flex flex-col items-center justify-center hover:scale-[1.03] transition"
-              >
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={220}
-                  height={220}
-                  className="mb-4 h-[220px] w-[220px] object-cover"
-                />
-                <p className="text-xl font-semibold">{product.name}</p>
-              </Link>
-            </RevealOnScroll>
+            <div
+              key={product.id}
+              className="w-[82vw] max-w-[320px] shrink-0 snap-center sm:w-[56vw] sm:max-w-[380px] lg:w-[300px] lg:max-w-none lg:snap-none"
+            >
+              <RevealOnScroll direction="up" delay={0.3}>
+                <Link
+                  href={`/Product/${product.slug}`}
+                  className="flex h-[360px] w-full flex-col items-center justify-center rounded-3xl bg-[#F7F7F7] p-5 text-center text-black shadow-lg transition sm:h-[400px] sm:p-6 lg:hover:scale-[1.03]"
+                >
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={220}
+                    height={220}
+                    loading="lazy"
+                    className="mb-4 h-[190px] w-[190px] object-cover sm:h-[220px] sm:w-[220px]"
+                  />
+                  <p className="text-xl font-semibold">{product.name}</p>
+                </Link>
+              </RevealOnScroll>
+            </div>
           ))}
         </div>
       </div>

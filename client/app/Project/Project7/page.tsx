@@ -18,6 +18,7 @@ const page = () => {
               width={800}
               height={600}
               alt="Fume extraction system"
+              loading="lazy"
               className="h-full w-full object-cover drop-shadow-[5rem] rounded-3xl"
             />
           </div>

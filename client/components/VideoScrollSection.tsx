@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import LazyVideo from "@/components/LazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +38,7 @@ export default function VideoScrollSection() {
       className="relative  md:h-screen w-[100vw] overflow-hidden bg-[#F7F7F7]"
     >
       <div className="relative h-[100vh] w-full md:h-screen">
-        <video
+        <LazyVideo
           ref={videoRef}
           src="/Mastering Air Quality with Inclean_free.mp4"
           autoPlay

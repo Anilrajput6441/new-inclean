@@ -1,24 +1,25 @@
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
+import LazyVideo from "@/components/LazyVideo";
 import React from "react";
 // import Image from "next/image";
 
 const Strategy = () => {
   return (
-    <div>
-      <h1 className="flex flex-col lato-regular2 text-center p-1 pt-10 bg-[#F7F7F7]">
+    <section className="bg-[#F7F7F7] px-4 py-14 sm:px-8 sm:py-20 lg:px-5 lg:py-24">
+      <h1 className="flex flex-col text-center font-['Lato',sans-serif] text-5xl font-normal leading-none sm:text-7xl lg:text-8xl xl:text-[8rem]">
         <RevealOnScroll direction="up" delay={0.2}>
           Our Strategy
         </RevealOnScroll>
       </h1>
 
-      <div className="flex  w-full  bg-[#F7F7F7] md:p-5 pt-10 md:pt-40">
+      <div className="mx-auto flex w-full max-w-[1600px] pt-14 lg:pt-32">
         <RevealOnScroll direction="up" delay={0.2}>
-          <div className="flex flex-col-reverse md:flex-row ">
-            <div className="w-full md:w-1/2 pt-10  h-full ">
-              <h1 className="lato-light text-[32px] px-5 md:pl-10">
+          <div className="flex flex-col-reverse gap-6 lg:flex-row lg:gap-10">
+            <div className="h-full w-full lg:w-1/2 lg:pt-10">
+              <h2 className="lato-light text-2xl sm:text-3xl lg:pl-10 lg:text-[32px]">
                 Designing & Planning
-              </h1>
-              <p className="lato-medium text-[22px] p-5 md:pt-5 md:pl-10 ">
+              </h2>
+              <p className="lato-medium pt-4 text-base leading-relaxed sm:text-lg lg:pl-10 lg:pt-5 lg:text-[22px]">
                 We create customized HVAC designs that ensure efficient airflow,
                 energy savings, and long-term performance—tailored to meet every
                 project&apos;s unique needs. Our planning process blends
@@ -29,38 +30,38 @@ const Strategy = () => {
                 environment.
               </p>
             </div>
-            <div className="w-full md:w-1/2 h-full p-2 ">
-              <video
+            <div className="h-full w-full lg:w-1/2">
+              <LazyVideo
                 src="/strategydata/Untitled design (2).mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full rounded-2xl "
+                className="aspect-video h-auto w-full rounded-2xl object-cover"
               />
             </div>
           </div>
         </RevealOnScroll>
       </div>
 
-      <div className="flex w-full bg-[#F7F7F7] md:p-5 pt-10 md:pt-40">
+      <div className="mx-auto flex w-full max-w-[1600px] pt-20 lg:pt-32">
         <RevealOnScroll direction="down" delay={0.2}>
-          <div className="flex flex-col md:flex-row">
-            <div className="w-full md:w-1/2 h-full p-2">
-              <video
+          <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
+            <div className="h-full w-full lg:w-1/2">
+              <LazyVideo
                 src="/strategydata/Untitled design (3).mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full rounded-2xl"
+                className="aspect-video h-auto w-full rounded-2xl object-cover"
               />
             </div>
-            <div className="w-full md:w-1/2 pt-10 h-full">
-              <h1 className="lato-light text-[32px] px-5 md:pl-10">
+            <div className="h-full w-full lg:w-1/2 lg:pt-10">
+              <h2 className="lato-light text-2xl sm:text-3xl lg:pl-10 lg:text-[32px]">
                 Equipment Planning and Selection
-              </h1>
-              <p className="lato-medium text-[22px] p-5 md:pt-5 md:pl-10">
+              </h2>
+              <p className="lato-medium pt-4 text-base leading-relaxed sm:text-lg lg:pl-10 lg:pt-5 lg:text-[22px]">
                 We meticulously plan and select equipment tailored to the
                 specific requirements of each project. Our focus is on choosing
                 compact, high-performance machinery that ensures maximum
@@ -73,14 +74,14 @@ const Strategy = () => {
         </RevealOnScroll>
       </div>
 
-      <div className="flex w-full bg-[#F7F7F7] md:p-5 pt-10 md:pt-40">
+      <div className="mx-auto flex w-full max-w-[1600px] pt-20 lg:pt-32">
         <RevealOnScroll direction="up" delay={0.2}>
-          <div className="flex flex-col-reverse md:flex-row">
-            <div className="w-full md:w-1/2 pt-10 h-full">
-              <h1 className="lato-light text-[32px] px-5 md:pl-10">
+          <div className="flex flex-col-reverse gap-6 lg:flex-row lg:gap-10">
+            <div className="h-full w-full lg:w-1/2 lg:pt-10">
+              <h2 className="lato-light text-2xl sm:text-3xl lg:pl-10 lg:text-[32px]">
                 Installation and Service Support
-              </h1>
-              <p className="lato-medium text-[22px] p-5 md:pt-5 md:pl-10">
+              </h2>
+              <p className="lato-medium pt-4 text-base leading-relaxed sm:text-lg lg:pl-10 lg:pt-5 lg:text-[22px]">
                 Our experienced team guarantees seamless installation of all
                 equipment, adhering to the highest standards of safety and
                 precision. We go beyond just setup — offering comprehensive
@@ -91,20 +92,20 @@ const Strategy = () => {
                 mind throughout the equipment’s lifecycle.
               </p>
             </div>
-            <div className="w-full md:w-1/2 h-full p-2">
-              <video
+            <div className="h-full w-full lg:w-1/2">
+              <LazyVideo
                 src="/strategydata/Untitled design (4).mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full rounded-2xl"
+                className="aspect-video h-auto w-full rounded-2xl object-cover"
               />
             </div>
           </div>
         </RevealOnScroll>
       </div>
-    </div>
+    </section>
   );
 };
 

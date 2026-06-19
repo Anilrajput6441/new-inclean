@@ -19,6 +19,7 @@ const page = () => {
               width={200}
               height={200}
               alt="Cool animation"
+              loading="lazy"
               className="h-full w-full object-cover drop-shadow-[5rem] rounded-3xl animate-float"
             />
           </div>
@@ -192,6 +193,7 @@ const page = () => {
               width={200}
               height={200}
               alt="Cool animation"
+              loading="lazy"
               className="h-full md:h-[80%] w-full md:w-[80%] object-cover drop-shadow-[5rem] rounded-3xl animate-float"
             />
           </div>
@@ -209,6 +211,7 @@ const page = () => {
               width={200}
               height={200}
               alt="Cool animation"
+              loading="lazy"
               className="h-full md:h-[80%] w-full md:w-[80%] object-cover drop-shadow-[5rem] rounded-3xl animate-float"
             />
           </div>

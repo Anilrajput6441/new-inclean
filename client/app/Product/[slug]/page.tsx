@@ -45,7 +45,7 @@ const Page = async ({ params }: Props) => {
               src={product.image}
               alt={product.name}
               fill
-              priority
+              loading="lazy"
               sizes="(min-width: 768px) 36vw, 88vw"
               className="object-cover"
             />

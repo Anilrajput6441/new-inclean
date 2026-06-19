@@ -32,6 +32,7 @@ const page = () => {
                   src={product.image}
                   alt={product.name}
                   fill
+                  loading="lazy"
                   sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 90vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />

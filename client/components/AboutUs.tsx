@@ -1,67 +1,74 @@
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
+import LazyVideo from "@/components/LazyVideo";
+import Link from "next/link";
 import React from "react";
 
 const AboutUs = () => {
   return (
     <RevealOnScroll direction="up" delay={0.3}>
-      <div className=" bg-[#F7F7F7] w-full h-full pt-10 px-9 md:px-20">
-        <h1 className="lato-medium text-[40px] md:text-[100px]  text-center md:text-start md:pl-20 border-b-1  border-gray-400 mb-2">
+      <section className="h-full w-full bg-[#F7F7F7] px-4 py-14 sm:px-8 sm:py-20 lg:px-20">
+        <h1 className="lato-medium mb-2 border-b border-gray-400 pb-3 text-center text-4xl sm:text-6xl lg:pl-20 lg:text-left lg:text-[100px]">
           About us
         </h1>
 
-        <div className="flex flex-col md:flex-row w-full mb-15 md:mb-0 h-screen">
-          <div className="w-full md:w-[20%] h-full text-xl pt-10 text-center">
+        <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-10 py-10 sm:py-14 lg:min-h-screen lg:grid-cols-[20%_45%_35%] lg:gap-0">
+          <div className="w-full text-center text-xl lg:pt-10">
             <span className="border-b-1 px-3 ">Inclean </span>
             <br />
             <span className="text-sm ">We care about your air</span>
           </div>
-          <div className="w-full md:w-[45%] h-full  flex flex-col gap-8 md:p-4">
-            <h1 className="lato-medium text-4xl font-semibold ">
-              <span className="lato-bold  transform rotate-270 md:-ml-5 pt-10 inline-block">
+          <div className="flex w-full flex-col gap-5 sm:gap-7 lg:p-4">
+            <h2 className="lato-medium flex flex-wrap items-end justify-center gap-x-2 text-4xl font-semibold sm:text-5xl lg:justify-start">
+              <span className="lato-bold inline-block lg:-ml-5 lg:rotate-270 lg:pt-10">
                 WHO
               </span>
-              <span className="lato-bold text-5xl md:text-8xl">WE ARE ?</span>
-            </h1>
-            <p>
+              <span className="lato-bold text-5xl sm:text-7xl lg:text-8xl">WE ARE?</span>
+            </h2>
+            <p className="leading-relaxed">
               Inclean is one of the trusted HVAC companies offering heating,
               ventilation, air-conditioning, cooling, and exhaust solutions to
               industrial, residential, commercial, and government bodies.
             </p>
-            <p>
+            <p className="leading-relaxed">
               Founded around the growing need for high-quality indoor
               environments, Inclean focuses on fresh air, comfort, and reliable
               engineering. Our team designs and supplies axial flow fans,
               centrifugal blowers, fire rated fans, basement ventilation fans,
               fresh air units, and custom HVAC equipment.
             </p>
-            <p>
+            <p className="leading-relaxed">
               We also undertake turnkey industrial and commercial exhaust and
               ventilation projects, backed by consulting, project analysis, and
               one-window engineering support.
             </p>
           </div>
-          <div className="w-[35%] hidden md:flex h-full p-5">
-            <video
+          <div className="hidden h-full p-5 lg:flex">
+            <LazyVideo
               src="/20250522_0248_Engineering Clean Air_simple_compose_01jvtbbzsnf5yshg80aag5ve6k.mp4"
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full rounded-2xl "
+              className="h-full max-h-[760px] w-full rounded-2xl object-cover"
             />
           </div>
         </div>
-        <div className="h-[50vh] md:h-[70vh]   flex flex-col justify-center items-center gap-10 border-t-1 border-gray-400">
-          <h1 className="lato-regular">Let’s work together</h1>
-          <button className="relative overflow-hidden px-12 py-3  lato-medium text-[24px] rounded-full lato-medium bg-black text-white  hover:text-black group ">
+        <div className="flex min-h-[45vh] flex-col items-center justify-center gap-8 border-t border-gray-400 py-16 text-center sm:min-h-[55vh] lg:min-h-[70vh] lg:gap-10">
+          <h2 className="max-w-[12ch] font-['Lato',sans-serif] text-[clamp(3rem,10vw,8rem)] font-light leading-[0.95] tracking-[-0.04em]">
+            Let’s work together
+          </h2>
+          <Link
+            href="/Contact"
+            className="group relative overflow-hidden rounded-full bg-black px-8 py-3 text-lg text-white hover:text-black sm:px-12 sm:text-2xl"
+          >
             <span className="relative z-10">Say Hello →</span>
 
             <span className="absolute z-12 inset-0 flex justify-center items-center bg-cyan-400 lato-medium transform -translate-x-full group-hover:translate-x-0 transition-transform duration-600 ease-in-out rounded-full text-black">
               → Bonjour
             </span>
-          </button>
+          </Link>
         </div>
-      </div>
+      </section>
     </RevealOnScroll>
   );
 };

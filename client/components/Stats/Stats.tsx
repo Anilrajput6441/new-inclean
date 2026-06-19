@@ -4,8 +4,8 @@ import RevealOnScroll from "@/app/utils/RevealOnScroll";
 const Stats = () => {
   return (
     <RevealOnScroll direction="up" delay={0.3}>
-      <div className="flex flex-col md:flex-row justify-center items-center p-30 bg-[#F7F7F7] ">
-        <div className="w-full md:w-1/3 border-t-1 border-b-1 border-gray-400 pb-10 pt-5 flex flex-col justify-center items-center">
+      <section className="grid grid-cols-1 bg-[#F7F7F7] px-4 py-14 sm:px-8 sm:py-20 lg:grid-cols-3 lg:px-20 xl:px-30">
+        <div className="flex w-full flex-col items-center justify-center border-y border-gray-400 px-3 py-8 text-center lg:border-r">
           <div className="flex items-center justify-center">
             <CountUp
               from={0}
@@ -13,13 +13,13 @@ const Stats = () => {
               separator=","
               direction="up"
               duration={2}
-              className="count-up-text lato-regular text-[64px]"
+              className="count-up-text font-['Lato',sans-serif] text-6xl font-light sm:text-7xl lg:text-6xl xl:text-7xl"
             />
-            <span className="lato-medium text-[6rem] mb-2">+</span>
+            <span className="lato-medium mb-2 text-6xl sm:text-7xl lg:text-6xl xl:text-7xl">+</span>
           </div>
-          <h1 className="lato-medium text-3xl">Years in Business</h1>
+          <h2 className="lato-medium text-xl sm:text-2xl xl:text-3xl">Years in Business</h2>
         </div>
-        <div className="w-full md:w-1/3  border-t-1 border-b-1 border-gray-400   pb-10 pt-5 flex flex-col justify-center items-center">
+        <div className="flex w-full flex-col items-center justify-center border-b border-gray-400 px-3 py-8 text-center lg:border-y lg:border-r">
           <div className="flex items-center justify-center">
             <CountUp
               from={0}
@@ -27,13 +27,13 @@ const Stats = () => {
               separator=","
               direction="up"
               duration={2}
-              className="count-up-text lato-regular text-[64px]"
+              className="count-up-text font-['Lato',sans-serif] text-6xl font-light sm:text-7xl lg:text-6xl xl:text-7xl"
             />
-            <span className="lato-medium text-[6rem] mb-2">+</span>
+            <span className="lato-medium mb-2 text-6xl sm:text-7xl lg:text-6xl xl:text-7xl">+</span>
           </div>
-          <h1 className="lato-medium text-3xl">Projects Completed</h1>
+          <h2 className="lato-medium text-xl sm:text-2xl xl:text-3xl">Projects Completed</h2>
         </div>
-        <div className="w-full md:w-1/3 border-t-1 border-b-1 border-gray-400  pb-10 pt-5 flex flex-col justify-center items-center">
+        <div className="flex w-full flex-col items-center justify-center border-b border-gray-400 px-3 py-8 text-center lg:border-y">
           <div className="flex items-center justify-center">
             <CountUp
               from={0}
@@ -41,13 +41,13 @@ const Stats = () => {
               separator=","
               direction="up"
               duration={2}
-              className="count-up-text lato-regular text-[64px]"
+              className="count-up-text font-['Lato',sans-serif] text-6xl font-light sm:text-7xl lg:text-6xl xl:text-7xl"
             />
-            <span className="lato-medium text-[6rem] mb-2">+</span>
+            <span className="lato-medium mb-2 text-6xl sm:text-7xl lg:text-6xl xl:text-7xl">+</span>
           </div>
-          <h1 className="lato-medium text-3xl">Serving Countries</h1>
+          <h2 className="lato-medium text-xl sm:text-2xl xl:text-3xl">Serving Countries</h2>
         </div>
-      </div>
+      </section>
     </RevealOnScroll>
   );
 };

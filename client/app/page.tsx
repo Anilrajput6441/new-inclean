@@ -1,6 +1,5 @@
 "use client";
 import Hero from "@/components/Hero/Hero";
-import VideoScrollSection from "@/components/VideoScrollSection";
 import "lenis/dist/lenis.css";
 import Lenis from "lenis";
 import { useEffect } from "react";
@@ -15,21 +14,24 @@ import AboutUs from "@/components/AboutUs";
 
 export default function Home() {
   useEffect(() => {
-    // Initialize Lenis
     const lenis = new Lenis();
+    let animationFrame = 0;
 
-    // Use requestAnimationFrame to continuously update the scroll
     function raf(time: number): void {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      animationFrame = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
-  });
+    animationFrame = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+      lenis.destroy();
+    };
+  }, []);
   return (
     <div className="">
       <Hero />
-      <VideoScrollSection />
       <Thirddiv />
       {/* <Fourthdiv /> */}
       <Strategy />

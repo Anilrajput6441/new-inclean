@@ -15,9 +15,10 @@ export default function CustomCursor({ active }: Props) {
   const currentPos = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    if (!active) return;
+    if (!active || !window.matchMedia("(hover: hover)").matches) return;
 
     setVisible(true);
+    let animationFrame = 0;
 
     const handleMove = (e: MouseEvent) => {
       targetPos.current = {
@@ -39,13 +40,14 @@ export default function CustomCursor({ active }: Props) {
         cursorRef.current.style.transform = `translate3d(${currentPos.current.x}px, ${currentPos.current.y}px, 0)`;
       }
 
-      requestAnimationFrame(animate);
+      animationFrame = requestAnimationFrame(animate);
     };
 
-    animate();
+    animationFrame = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("mousemove", handleMove);
+      cancelAnimationFrame(animationFrame);
       setVisible(false);
     };
   }, [active]);

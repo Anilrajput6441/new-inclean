@@ -25,7 +25,7 @@ const logos = [
 
 const BrandMarquee = () => {
   return (
-    <div className="py-6 pb-30 bg-[#F7F7F7] ">
+    <section className="bg-[#F7F7F7] py-10 sm:py-14 lg:pb-30">
       <RevealOnScroll direction="up" delay={0.3}>
         <Marquee
           pauseOnHover
@@ -33,18 +33,20 @@ const BrandMarquee = () => {
           speed={40} // adjust scroll speed
         >
           {logos.map((logo, index) => (
-            <div key={index} className="mx-8">
+            <div key={index} className="mx-5 flex h-16 w-24 items-center justify-center sm:mx-8 sm:h-20 sm:w-32">
               <Image
                 src={logo}
                 alt={`brand-${index}`}
                 width={120}
                 height={70}
+                loading="lazy"
+                className="max-h-full w-auto max-w-full object-contain"
               />
             </div>
           ))}
         </Marquee>
       </RevealOnScroll>
-    </div>
+    </section>
   );
 };
 

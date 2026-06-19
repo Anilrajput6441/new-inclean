@@ -27,6 +27,7 @@ const Fourthdiv = () => {
                 width={100}
                 height={100}
                 alt="Cool animation"
+                loading="lazy"
                 className="border-1 h-10 w-10 "
               />
             </div>
@@ -37,6 +38,7 @@ const Fourthdiv = () => {
               alt="ahu unit"
               height={500}
               width={500}
+              loading="lazy"
               className="drop-shadow-[5rem]"
             />
           </div>

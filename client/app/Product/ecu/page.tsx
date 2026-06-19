@@ -19,6 +19,7 @@ const page = () => {
               width={200}
               height={200}
               alt="Cool animation"
+              loading="lazy"
               className="h-70 md:h-90 w-full object-cover drop-shadow-[5rem] rounded-3xl animate-float"
             />
           </div>
@@ -36,6 +37,7 @@ const page = () => {
               width={600}
               height={200}
               alt="Evaporative Cooling Unit"
+              loading="lazy"
               className="w-[40%] h-[40%] object-cover rounded-lg"
             />
           </div>
@@ -208,6 +210,7 @@ const page = () => {
               width={600}
               height={200}
               alt="Evaporative Cooling Unit"
+              loading="lazy"
               className="w-[40%] h-[40%] object-cover rounded-lg"
             />
           </div>
