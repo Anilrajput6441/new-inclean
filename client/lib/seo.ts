@@ -5,7 +5,7 @@ export const siteConfig = {
   shortName: "Inclean",
   url: "https://www.inclean.in",
   description:
-    "Inclean Technologies designs and supplies HVAC, ventilation, air handling, evaporative cooling, exhaust, and industrial air-quality systems across India.",
+    "Inclean Technologies is an HVAC company and contractor in India providing HVAC design, air handling units, industrial ventilation, evaporative cooling, exhaust, installation, and service.",
   locale: "en_IN",
 };
 

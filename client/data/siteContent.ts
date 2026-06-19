@@ -323,7 +323,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Industrial Ventilation System",
-    href: "/project/project1",
+    href: "/projects/project1",
     summary:
       "Industrial ventilation systems that control airborne dust, fumes, humidity, and heat while improving working conditions.",
     image: `${uploads}/2020/06/industry-970151_1920.jpg`,
@@ -331,7 +331,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Kitchen Exhaust Ventilation",
-    href: "/project/project2",
+    href: "/projects/project2",
     summary:
       "Commercial kitchen exhaust systems for removing smoke, grease, heat, and odors from cooking areas.",
     image: `${uploads}/2020/04/BCRUSH-Smoke-Exhaust-1.jpg`,
@@ -339,7 +339,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Centralized Air Conditioning",
-    href: "/project/project3",
+    href: "/projects/project3",
     summary:
       "Efficient central HVAC systems designed to serve multiple spaces with optimized energy use.",
     image: `${uploads}/2020/04/WhatsApp-Image-2023-03-24-at-1.30.53-PM.jpeg`,
@@ -347,7 +347,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "Aircraft Hanger Ventilation",
-    href: "/project/project4",
+    href: "/projects/project4",
     summary:
       "High-volume hangar ventilation solutions that support aircraft protection, maintenance, and comfort.",
     image: `${uploads}/2020/04/WhatsApp-Image-2023-03-24-at-1.30.40-PM.jpeg`,
@@ -355,7 +355,7 @@ export const projects: Project[] = [
   {
     id: 5,
     title: "Parking Ventilation System",
-    href: "/project/project5",
+    href: "/projects/project5",
     summary:
       "Ventilation systems for enclosed car parks that remove CO and support smoke extraction in emergencies.",
     image: `${uploads}/2020/06/atc-otopark-havalandirma-2.jpg`,
@@ -363,7 +363,7 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "Lift-well Pressurization",
-    href: "/project/project6",
+    href: "/projects/project6",
     summary:
       "Smoke-control pressurization systems that protect lift areas during fire events.",
     image: `${uploads}/2020/06/lift.jpg`,
@@ -371,7 +371,7 @@ export const projects: Project[] = [
   {
     id: 7,
     title: "Fume Extraction System",
-    href: "/project/project7",
+    href: "/projects/project7",
     summary:
       "Customized source-capture systems for welding fumes, pollutants, and industrial airborne contaminants.",
     image: `${uploads}/2020/06/Welding_NEX_HD-2.jpg`,

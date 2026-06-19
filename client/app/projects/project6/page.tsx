@@ -8,7 +8,7 @@ export const metadata: Metadata = createMetadata({
   title: "Lift-Well Pressurization Systems",
   description:
     "Lift-well pressurization and smoke-control systems that help protect lift shafts and evacuation routes during fire events.",
-  path: "/project/project6",
+  path: "/projects/project6",
   images: ["/productimg/liftwellven.png"],
 });
 

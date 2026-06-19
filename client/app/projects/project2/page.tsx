@@ -8,7 +8,7 @@ export const metadata: Metadata = createMetadata({
   title: "Kitchen Exhaust Ventilation",
   description:
     "Commercial kitchen exhaust ventilation systems for capturing smoke, grease, heat, odors, and cooking contaminants.",
-  path: "/project/project2",
+  path: "/projects/project2",
   images: ["/productimg/kitchenvent.png"],
 });
 

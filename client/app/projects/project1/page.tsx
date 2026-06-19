@@ -8,7 +8,7 @@ export const metadata: Metadata = createMetadata({
   title: "Industrial Ventilation Systems",
   description:
     "Industrial ventilation systems designed to control dust, fumes, humidity, heat, and airborne contaminants in demanding workplaces.",
-  path: "/project/project1",
+  path: "/projects/project1",
   images: ["/productimg/indven.png"],
 });
 

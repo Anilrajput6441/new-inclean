@@ -3,6 +3,7 @@
 import AboutUs from "@/components/AboutUs";
 import BrandMarquee from "@/components/BrandMarquee";
 import Hero from "@/components/Hero/Hero";
+import HvacSeoContent from "@/components/HvacSeoContent";
 import HorizontalSlider from "@/components/HorizontalSlider";
 import RecentWork from "@/components/RecentWork";
 import Stats from "@/components/Stats/Stats";
@@ -13,6 +14,7 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
+      <HvacSeoContent />
       <Thirddiv />
       <Strategy />
       <Stats />

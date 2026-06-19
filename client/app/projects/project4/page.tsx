@@ -8,7 +8,7 @@ export const metadata: Metadata = createMetadata({
   title: "Aircraft Hangar Ventilation Systems",
   description:
     "High-volume aircraft hangar ventilation systems supporting air quality, maintenance operations, equipment protection, and comfort.",
-  path: "/project/project4",
+  path: "/projects/project4",
   images: ["/productimg/airvent.png"],
 });
 

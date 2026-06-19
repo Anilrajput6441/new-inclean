@@ -8,7 +8,7 @@ export const metadata: Metadata = createMetadata({
   title: "Parking Ventilation Systems",
   description:
     "Enclosed parking ventilation and smoke-extraction systems designed to remove carbon monoxide and support fire safety.",
-  path: "/project/project5",
+  path: "/projects/project5",
   images: ["/productimg/parkvent.png"],
 });
 

@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/product", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/product/ahu", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/product/ecu", priority: 0.8, changeFrequency: "monthly" as const },
-    { path: "/project", priority: 0.9, changeFrequency: "monthly" as const },
+    { path: "/projects", priority: 0.9, changeFrequency: "monthly" as const },
   ];
 
   const productRoutes = products

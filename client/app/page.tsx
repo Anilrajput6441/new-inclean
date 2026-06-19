@@ -3,9 +3,9 @@ import HomePage from "@/components/HomePage";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
-  title: "HVAC & Industrial Ventilation Solutions in India",
+  title: "Best HVAC Contractor & HVAC Company in India | Inclean",
   description:
-    "Explore engineered HVAC, air handling, evaporative cooling, exhaust, ventilation, and air-quality solutions from Inclean Technologies.",
+    "Inclean is an HVAC company and contractor in India offering HVAC design, AHU manufacturing, industrial ventilation, evaporative cooling, exhaust, installation, and service.",
   path: "/",
 });
 

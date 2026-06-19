@@ -8,7 +8,7 @@ export const metadata: Metadata = createMetadata({
   title: "Centralized Air Conditioning Systems",
   description:
     "Centralized air-conditioning systems engineered for efficient comfort, dependable airflow, and optimized energy performance.",
-  path: "/project/project3",
+  path: "/projects/project3",
   images: ["/productimg/centvent.png"],
 });
 

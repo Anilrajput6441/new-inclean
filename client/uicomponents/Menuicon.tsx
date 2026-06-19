@@ -10,7 +10,7 @@ const Hamburger = () => {
   const fillColor = active ? "#fff" : "#000";
   const demoItems = [
     {
-      link: "/project",
+      link: "/projects",
       text: "Projects",
       image:
         "https://s3-ap-south-1.amazonaws.com/static.awfis.com/wp-content/uploads/2017/07/07184649/ProjectManagement.jpg",
