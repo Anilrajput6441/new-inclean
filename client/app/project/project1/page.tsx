@@ -1,6 +1,16 @@
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Industrial Ventilation Systems",
+  description:
+    "Industrial ventilation systems designed to control dust, fumes, humidity, heat, and airborne contaminants in demanding workplaces.",
+  path: "/project/project1",
+  images: ["/productimg/indven.png"],
+});
 
 const page = () => {
   return (

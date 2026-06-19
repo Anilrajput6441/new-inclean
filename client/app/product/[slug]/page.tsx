@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import { products } from "@/data/siteContent";
+import { createMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -13,6 +15,27 @@ export function generateStaticParams() {
   return products.map((product) => ({
     slug: product.slug,
   }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const product = products.find((item) => item.slug === slug);
+
+  if (!product) {
+    return {};
+  }
+
+  const canonicalPath =
+    product.slug === "air-handling-unit"
+      ? "/product/ahu"
+      : `/product/${product.slug}`;
+
+  return createMetadata({
+    title: product.name,
+    description: product.summary,
+    path: canonicalPath,
+    images: [product.image],
+  });
 }
 
 const Page = async ({ params }: Props) => {
@@ -28,7 +51,7 @@ const Page = async ({ params }: Props) => {
       <section className="flex min-h-screen flex-col pt-28 md:flex-row md:pt-16">
         <RevealOnScroll direction="up" delay={0.2}>
           <div className="flex h-full w-full flex-col justify-center px-8 md:w-[58vw] md:px-20">
-            <Link href="/Product" className="mb-8 lato-medium text-cyan-700">
+            <Link href="/product" className="mb-8 lato-medium text-cyan-700">
               Products
             </Link>
             <h1 className="lato-regular text-[58px] leading-tight md:text-[112px]">

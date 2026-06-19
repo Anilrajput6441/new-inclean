@@ -10,24 +10,24 @@ const Hamburger = () => {
   const fillColor = active ? "#fff" : "#000";
   const demoItems = [
     {
-      link: "/Project",
+      link: "/project",
       text: "Projects",
       image:
         "https://s3-ap-south-1.amazonaws.com/static.awfis.com/wp-content/uploads/2017/07/07184649/ProjectManagement.jpg",
     },
     {
-      link: "/Product",
+      link: "/product",
       text: "Products",
       image: "/wp-content/uploads/2020/06/HAV.jpg",
     },
     {
-      link: "/About",
+      link: "/about",
       text: "About Us",
       image:
         "https://cdn.vectorstock.com/i/500p/54/96/about-us-button-web-banner-templates-vector-54215496.jpg",
     },
     {
-      link: "/Contact",
+      link: "/contact",
       text: "Contact Us",
       image:
         "https://www.shutterstock.com/image-vector/contact-us-vector-banner-word-600nw-1084565024.jpg",

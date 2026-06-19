@@ -1,6 +1,16 @@
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Aircraft Hangar Ventilation Systems",
+  description:
+    "High-volume aircraft hangar ventilation systems supporting air quality, maintenance operations, equipment protection, and comfort.",
+  path: "/project/project4",
+  images: ["/productimg/airvent.png"],
+});
 
 const page = () => {
   return (

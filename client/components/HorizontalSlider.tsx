@@ -80,7 +80,7 @@ export default function HorizontalRevealScroll() {
               various geographic locations.
             </p>
             <Link
-              href="/Product"
+              href="/product"
               className="text-orange-500 font-bold text-lg inline-flex items-center gap-2 hover:text-zinc-500 cursor-pointer border-b-1 pl-4 "
             >
               Read More <span className="text-2xl">↗</span>
@@ -104,7 +104,7 @@ export default function HorizontalRevealScroll() {
             >
               <RevealOnScroll direction="up" delay={0.3}>
                 <Link
-                  href={`/Product/${product.slug}`}
+                  href={`/product/${product.slug}`}
                   className="flex h-[360px] w-full flex-col items-center justify-center rounded-3xl bg-[#F7F7F7] p-5 text-center text-black shadow-lg transition sm:h-[400px] sm:p-6 lg:hover:scale-[1.03]"
                 >
                   <Image

@@ -1,6 +1,16 @@
 import React from "react";
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Air Handling Units (AHU)",
+  description:
+    "Custom air handling units by Inclean for controlled ventilation, filtration, cooling, heating, and reliable indoor air quality.",
+  path: "/product/ahu",
+  images: ["/productimg/ahu unit.png"],
+});
 
 const page = () => {
   return (

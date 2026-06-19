@@ -1,6 +1,16 @@
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Kitchen Exhaust Ventilation",
+  description:
+    "Commercial kitchen exhaust ventilation systems for capturing smoke, grease, heat, odors, and cooking contaminants.",
+  path: "/project/project2",
+  images: ["/productimg/kitchenvent.png"],
+});
 
 const page = () => {
   return (

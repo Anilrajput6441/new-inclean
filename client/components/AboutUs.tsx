@@ -18,8 +18,8 @@ const AboutUs = () => {
             <span className="text-sm ">We care about your air</span>
           </div>
           <div className="flex w-full flex-col gap-5 sm:gap-7 lg:p-4">
-            <h2 className="lato-medium flex flex-wrap items-end justify-center gap-x-2 text-4xl font-semibold sm:text-5xl lg:justify-start">
-              <span className="lato-bold inline-block lg:-ml-5 lg:rotate-270 lg:pt-10">
+            <h2 className="lato-medium flex flex-wrap items-end justify-center gap-x-2 text-4xl font-semibold sm:text-5xl lg:flex-nowrap lg:justify-start lg:gap-x-4">
+              <span className="lato-bold inline-block lg:shrink-0 lg:[writing-mode:vertical-rl] lg:rotate-180 lg:text-5xl lg:leading-none">
                 WHO
               </span>
               <span className="lato-bold text-5xl sm:text-7xl lg:text-8xl">WE ARE?</span>
@@ -58,7 +58,7 @@ const AboutUs = () => {
             Let’s work together
           </h2>
           <Link
-            href="/Contact"
+            href="/contact"
             className="group relative overflow-hidden rounded-full bg-black px-8 py-3 text-lg text-white hover:text-black sm:px-12 sm:text-2xl"
           >
             <span className="relative z-10">Say Hello →</span>

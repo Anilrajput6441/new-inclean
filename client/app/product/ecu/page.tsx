@@ -1,6 +1,16 @@
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Evaporative Cooling Units",
+  description:
+    "Single and double-stage evaporative cooling units engineered for efficient industrial and commercial cooling with high airflow and low energy use.",
+  path: "/product/ecu",
+  images: ["/productimg/ecudouble.png"],
+});
 
 const page = () => {
   return (

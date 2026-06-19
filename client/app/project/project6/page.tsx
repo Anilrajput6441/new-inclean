@@ -1,6 +1,16 @@
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import Image from "next/image";
 import React from "react";
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Lift-Well Pressurization Systems",
+  description:
+    "Lift-well pressurization and smoke-control systems that help protect lift shafts and evacuation routes during fire events.",
+  path: "/project/project6",
+  images: ["/productimg/liftwellven.png"],
+});
 
 const page = () => {
   return (

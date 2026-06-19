@@ -3,6 +3,15 @@ import Link from "next/link";
 import React from "react";
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import { products } from "@/data/siteContent";
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "HVAC, Ventilation & Air Quality Products",
+  description:
+    "Browse Inclean air handling units, fan coil units, air washers, exhaust systems, scrubbers, industrial coolers, fans, and HVAC equipment.",
+  path: "/product",
+});
 
 const page = () => {
   return (
@@ -24,7 +33,7 @@ const page = () => {
         {products.map((product) => (
           <RevealOnScroll key={product.slug} direction="up" delay={0.2}>
             <Link
-              href={`/Product/${product.slug}`}
+              href={`/product/${product.slug}`}
               className="group block h-full overflow-hidden bg-white shadow-xl"
             >
               <div className="relative h-72 w-full overflow-hidden">

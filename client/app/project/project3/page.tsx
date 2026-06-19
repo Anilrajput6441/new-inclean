@@ -1,6 +1,16 @@
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Centralized Air Conditioning Systems",
+  description:
+    "Centralized air-conditioning systems engineered for efficient comfort, dependable airflow, and optimized energy performance.",
+  path: "/project/project3",
+  images: ["/productimg/centvent.png"],
+});
 
 const page = () => {
   return (

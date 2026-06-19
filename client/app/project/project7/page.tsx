@@ -1,6 +1,16 @@
 import RevealOnScroll from "@/app/utils/RevealOnScroll";
 import Image from "next/image";
 import React from "react";
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Industrial Fume Extraction Systems",
+  description:
+    "Source-capture fume extraction systems for welding fumes, industrial pollutants, dust, and airborne contaminants.",
+  path: "/project/project7",
+  images: ["/wp-content/uploads/2020/06/Welding_NEX_HD-2.jpg"],
+});
 
 const page = () => {
   return (

@@ -20,7 +20,7 @@ const Thirddiv = () => {
               comfort and energy performance.
             </p>
             <Link
-              href="/Product/ahu"
+              href="/product/ahu"
               className="mt-6 flex w-fit cursor-pointer items-center hover:text-blue-600 lg:ml-10"
             >
               <button className=" lato-medium pr-5 cursor-pointer">
@@ -63,7 +63,7 @@ const Thirddiv = () => {
               solutions.
             </p>
             <Link
-              href="/Product/ecu"
+              href="/product/ecu"
               className="mt-6 flex w-fit cursor-pointer items-center hover:text-blue-600 lg:ml-10"
             >
               <button className="lato-medium pr-5 cursor-pointer">

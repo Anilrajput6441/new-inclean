@@ -1,4 +1,4 @@
-"use Client";
+"use client";
 import React from "react";
 
 import Image from "next/image";
@@ -58,7 +58,7 @@ const RecentWork = () => {
       </div>
       <div className="mt-12 flex w-full items-center justify-center lg:mt-16">
         <Link
-          href="/Project"
+          href="/project"
           className="group relative overflow-hidden rounded-full bg-black px-8 py-3 text-lg text-white hover:text-black sm:px-12 sm:text-2xl"
         >
           <span className="relative z-10">View all work →</span>
