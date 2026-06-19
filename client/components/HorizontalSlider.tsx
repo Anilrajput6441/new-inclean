@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -13,7 +13,7 @@ export default function HorizontalRevealScroll() {
   const trackRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const section = sectionRef.current;
@@ -55,7 +55,19 @@ export default function HorizontalRevealScroll() {
         });
       }, section);
 
-      return () => ctx.revert();
+      const refresh = () => ScrollTrigger.refresh();
+      const resizeObserver = new ResizeObserver(refresh);
+
+      resizeObserver.observe(track);
+      window.addEventListener("load", refresh);
+      document.fonts?.ready.then(refresh);
+      requestAnimationFrame(refresh);
+
+      return () => {
+        resizeObserver.disconnect();
+        window.removeEventListener("load", refresh);
+        ctx.revert();
+      };
     });
 
     return () => media.revert();
